@@ -28,7 +28,7 @@ const posts = (await getCollection('blog')).sort(
 							posts.map((post) => (
 								<li class="hover:bg-quartz-d40 p-1.5">
 									<a href={`/blog/${post.slug}/`} class="flex gap-x-8 no-underline">
-										<p class="text-quartz-l20">
+										<p class="text-quartz-l20 font-mono">
 											<ShortDate date={post.data.pubDate} />
 										</p>
 										<h4 class="underline">{post.data.title}</h4>
