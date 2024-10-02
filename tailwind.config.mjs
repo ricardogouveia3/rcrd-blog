@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	darkMode: 'class',
 	theme: {
 		extend: {
 			colors: {
@@ -25,27 +26,6 @@ export default {
 					d80: "#0f0f0f",
 					d90: "#070707",
 				},
-				'flame': {
-					l90: "#fcede9",
-					l80: "#f9dbd4",
-					l70: "#f7c9be",
-					l60: "#f4b7a8",
-					l50: "#f1a693",
-					l40: "#ee947d",
-					l30: "#eb8267",
-					l20: "#e97051",
-					l10: "#e65e3c",
-					DEFAULT: "#4a4a4a",
-					d10: "#cc4422",
-					d20: "#b63d1e",
-					d30: "#9f351b",
-					d40: "#882e17",
-					d50: "#722613",
-					d60: "#5b1e0f",
-					d70: "#44170b",
-					d80: "#2d0f08",
-					d90: "#170804",
-				},
 			},
 			fontFamily: {
 				sans: [
@@ -67,7 +47,31 @@ export default {
 					'monospace'
 				],
 			},
+			typography: ({ theme }) => ({
+				quartz: {
+					css: {
+						'--tw-prose-body': theme('colors.quartz.l80'),
+						'--tw-prose-headings': theme('colors.quartz.l90'),
+						'--tw-prose-lead': theme('colors.quartz.l60'),
+						'--tw-prose-links': theme('colors.quartz.l90'),
+						'--tw-prose-bold': theme('colors.quartz.l90'),
+						'--tw-prose-counters': theme('colors.quartz.l50'),
+						'--tw-prose-bullets': theme('colors.quartz.l30'),
+						'--tw-prose-hr': theme('colors.quartz.l20'),
+						'--tw-prose-quotes': theme('colors.quartz.l90'),
+						'--tw-prose-quote-borders': theme('colors.quartz.l20'),
+						'--tw-prose-captions': theme('colors.quartz.l60'),
+						'--tw-prose-code': theme('colors.quartz.l90'),
+						'--tw-prose-pre-code': theme('colors.quartz'),
+						'--tw-prose-pre-bg': theme('colors.quartz.l90'),
+						'--tw-prose-th-borders': theme('colors.quartz.l20'),
+						'--tw-prose-td-borders': theme('colors.quartz.l10'),
+					},
+				},
+			}),
 		},
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography'),
+	],
 }

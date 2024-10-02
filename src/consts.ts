@@ -3,3 +3,4 @@
 
 export const SITE_TITLE = "rcrd";
 export const SITE_DESCRIPTION = "front-end && UI && mais";
+export const SITE_HEAD_TITLE = "rcrd blog - front-end, UI e mais";

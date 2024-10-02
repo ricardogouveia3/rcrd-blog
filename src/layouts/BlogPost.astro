@@ -24,11 +24,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				<div class="hero-image border-solid border-2 border-quartz-80 p-2 mb-6">
 					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
 				</div>
-				<div class="prose">
-					<div class="post-contents my-10">
-						<slot class="my-10" />
-					</div>
-					
+				<div class="prose prose-quartz my-10">
+					<slot class="my-10" />					
 				</div>
 			</article>
 			<hr class="my-6 bg-quartz-l20 border-quartz-l20" />

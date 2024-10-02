@@ -2,19 +2,19 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { SITE_DESCRIPTION, SITE_HEAD_TITLE } from '../consts';
 import { getCollection } from 'astro:content';
 import ShortDate from '../components/ShortDate.astro';
 
 const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+	(a: { data: { pubDate: number; }; }, b: { data: { pubDate: number; }; }) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="pt-br" class="dark">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={SITE_HEAD_TITLE} description={SITE_DESCRIPTION} />
 
 	</head>
 	<body class="flex justify-center bg-quartz-d70 text-quartz-l80">
@@ -22,10 +22,10 @@ const posts = (await getCollection('blog')).sort(
 			<Header />
 			<main>
 				<section>
-					<h3 class="text-4xl font-semibold	my-16">Blog</h3>
+					<h3 class="text-4xl font-semibold	my-16">Posts</h3>
 					<ul class="flex flex-col gap-y-2 my-16">
 						{
-							posts.map((post) => (
+							posts.map((post:any) => (
 								<li class="hover:bg-quartz-d40 p-1.5">
 									<a href={`/blog/${post.slug}/`} class="flex gap-x-8 no-underline">
 										<p class="text-quartz-l20 font-mono">
