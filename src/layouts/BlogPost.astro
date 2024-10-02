@@ -13,72 +13,30 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
 	</head>
 
-	<body>
-		<Header />
-		<main>
+	<body class="flex justify-center bg-quartz-d70 text-quartz-l80 post-page">
+		<div class="max-w-screen-sm mx-4">
+			<Header />
+			<main>
 			<article>
-				<div class="hero-image">
+				<h1 class="text-4xl font-semibold	my-16">{title}</h1>
+				<div class="hero-image border-solid border-2 border-quartz-80 p-2 mb-6">
 					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
 				</div>
 				<div class="prose">
-					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{
-								updatedDate && (
-									<div class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</div>
-								)
-							}
-						</div>
-						<h1>{title}</h1>
-						<hr />
+					<div class="post-contents my-10">
+						<slot class="my-10" />
 					</div>
-					<slot />
+					
 				</div>
 			</article>
+			<hr class="my-6 bg-quartz-l20 border-quartz-l20" />
+			<div class="flex">
+				<a class="no-underline hover:bg-quartz-d40 p-1.5 inline-block" href="/">← Início</a> 
+				<p class="date p-1.5 text-quartz-l20 italic">·	&nbsp; Publicado em {updatedDate ? (<FormattedDate date={updatedDate} />) : <FormattedDate date={pubDate} />}</p>
+			</div>
+			<hr class="my-6 bg-quartz-l20 border-quartz-l20" />
 		</main>
 		<Footer />
 	</body>
