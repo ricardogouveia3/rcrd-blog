@@ -1,6 +1,6 @@
 ---
 title: "User Agent Style Sheet: o porquê de um CSS que só serve para ser sobrescrito"
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
+description: ""
 pubDate: "Nov 26 2018"
 heroImage: https://miro.medium.com/max/3840/1*pw7fJIc9PK4UoISAmnw9TQ.jpeg
 tags: [CSS, front-end, user-agent-style-sheet]

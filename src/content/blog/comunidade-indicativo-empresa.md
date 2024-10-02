@@ -1,7 +1,7 @@
 ---
 pubDate: "Jun 07 2024"
 title: Comunidade como indicativo de empresas
-description: Tornar-se dev é um processo complexo e depende do seu aprendizado, e não do conteúdo de terceiros
+description: ""
 heroImage: https://media.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fh3867c48pl32ejur0y8q.jpg
 tags: [community, developer, career, software]
 ---

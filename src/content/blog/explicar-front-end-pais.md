@@ -1,6 +1,6 @@
 ---
 title: Como explicar o front-end para meus pais?
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
+description: ""
 pubDate: "May 31 2018"
 heroImage: https://miro.medium.com/max/3840/1*E07DGdBo2Xv47RUHLQRTVg.jpeg
 tags: [Profissão, front-end]

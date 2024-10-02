@@ -1,6 +1,6 @@
 ---
 title: "Como a Front-end Week SP 2018 me ensinou que, na edição de 2017, eu fiz tudo errado"
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
+description: ""
 pubDate: "Jul 18 2018"
 heroImage: "https://miro.medium.com/max/4096/1*F0SUBO0Bhmrv8NTZAJOd-A.jpeg"
 tags: [front-end-week]

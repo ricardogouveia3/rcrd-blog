@@ -1,5 +1,5 @@
 ---
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
+description: ""
 pubDate: "Jan 5 2018"
 title: Pré-processamento e a SKYNET
 heroImage: https://miro.medium.com/max/10944/1*X3TNZbdu06LWNCpHixIFxQ.jpeg

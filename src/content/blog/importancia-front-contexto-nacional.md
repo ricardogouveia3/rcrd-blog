@@ -1,6 +1,6 @@
 ---
 title: "A importância da performance do front-end no contexto nacional"
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
+description: ""
 pubDate: "Nov 25 2017"
 heroImage: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*dQ6Wblk7J7rm1-89l56CJw.jpeg"
 tags: [Performance, Internet, Acessibilidade, Front End Development, Brasil]

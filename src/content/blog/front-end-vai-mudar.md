@@ -1,6 +1,6 @@
 ---
 title: O front-end vai mudar. Assim como todas as profissões e maneiras de se trabalhar
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
+description: ""
 pubDate: "Jul 16 2018"
 heroImage: "https://miro.medium.com/max/2400/1*UVGY35pUeGz0PNp21qOxXw.jpeg"
 tags: [front-end]

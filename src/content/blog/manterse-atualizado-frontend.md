@@ -1,6 +1,6 @@
 ---
 title: Como manter-se atualizado em front-end?
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
+description: ""
 pubDate: "May 31 2018"
 heroImage: https://miro.medium.com/max/3840/1*aPNgSTqmd8ZedcUSH9US8A.jpeg
 tags: [Front-end, Aprendizado, Mercado, Carreira]

@@ -1,7 +1,7 @@
 ---
 pubDate: "May 02 2021"
 title: "O front-end além da web"
-description: Uma reflexão sobre o termo 'front-end' e tudo que este pode abranger aplicada em habilidades profissionais.
+description: Uma reflexão sobre o termo 'front-end' e tudo que este pode abranger aplicada em habilidades profissionais
 heroImage: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5sce594md7pgd3va1393.jpg
 tags: [development, frontend, discuss]
 ---

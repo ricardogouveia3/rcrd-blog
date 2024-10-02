@@ -1,6 +1,6 @@
 ---
 title: Hypes, síndrome do impostor, e o desenvolvedor júnior
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
+description: ""
 pubDate: "Dec 9 2017"
 heroImage: "https://miro.medium.com/max/8860/1*u98adouc8-eKxM34eqi5Lw.jpeg"
 tags: [desenvolvimento, sindrome-do-impostor, hypes, front-end]

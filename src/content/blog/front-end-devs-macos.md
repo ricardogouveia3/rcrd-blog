@@ -1,6 +1,6 @@
 ---
 title: A história de amor entre macOS e os devs front-end
-description: "Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro."
+description: ""
 pubDate: "Dec 23 2017"
 heroImage: https://miro.medium.com/max/11520/1*ODZ1p0ZAHiOacd56DOCe7w.jpeg
 tags: [operating-systems, front-end, macos]
