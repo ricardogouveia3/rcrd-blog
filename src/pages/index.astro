@@ -7,7 +7,7 @@ import { getCollection } from 'astro:content';
 import ShortDate from '../components/ShortDate.astro';
 
 const posts = (await getCollection('blog')).sort(
-	(a: { data: { pubDate: number; }; }, b: { data: { pubDate: number; }; }) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime(),
 );
 ---
 
