@@ -7,7 +7,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage , tags } = Astro.props;
 ---
 
 <html lang="en">
@@ -20,7 +20,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 			<Header />
 			<main>
 			<article>
-				<h1 class="text-4xl font-semibold	my-16">{title}</h1>
+				<div class="mt-16 mb-8">
+					<h1 class="text-4xl font-bold">{title}</h1>
+					<div class="mt-4 text-quartz-l20 italic flex justify-between">
+						<p class="date ">{updatedDate ? (<FormattedDate date={updatedDate} />) : <FormattedDate date={pubDate} />}</p>
+						<span>{tags && tags.map((tag: any) => {return (`#${tag} `)})}</span>
+					</div>
+				</div>
 				<div class="hero-image border-solid border-2 border-quartz-80 p-2 mb-6">
 					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
 				</div>
@@ -28,12 +34,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					<slot class="my-10" />					
 				</div>
 			</article>
-			<hr class="my-6 bg-quartz-l20 border-quartz-l20" />
 			<div class="flex">
 				<a class="no-underline hover:bg-quartz-d40 p-1.5 inline-block" href="/">← Início</a> 
-				<p class="date p-1.5 text-quartz-l20 italic">·	&nbsp; Publicado em {updatedDate ? (<FormattedDate date={updatedDate} />) : <FormattedDate date={pubDate} />}</p>
 			</div>
-			<hr class="my-6 bg-quartz-l20 border-quartz-l20" />
 		</main>
 		<Footer />
 	</body>
