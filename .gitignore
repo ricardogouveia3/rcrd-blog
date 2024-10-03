@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# markdown style guide post
+src/content/blog/markdown-style-guide.md
