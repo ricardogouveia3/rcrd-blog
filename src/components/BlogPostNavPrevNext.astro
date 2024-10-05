@@ -19,7 +19,7 @@ const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1
         </a>
       )}
       {nextPost && (
-        <a class="border-solid border border-quartz-d40 hover:border-quartz p-2 flex flex-col sm:max-w-40 w-full gap-3" href={`/blog/${nextPost.slug}/`}>
+        <a class="border-solid border border-quartz-d40 hover:border-quartz p-2 flex flex-col sm:max-w-40 w-full gap-3 justify-between" href={`/blog/${nextPost.slug}/`}>
           <span class="text-xs text-quartz-l30 uppercase font-mono">Seguinte:&nbsp;</span>
           <p class="text-sm font-semibold">{nextPost.data.title}</p>
         </a>
