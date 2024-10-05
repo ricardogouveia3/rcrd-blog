@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog'))
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const currentPostIndex = posts.findIndex((post) => post.slug == Astro.params.slug);
+const previousPost = currentPostIndex + 1 === posts.length ? undefined : posts[currentPostIndex + 1];
+const nextPost = currentPostIndex === 0 ? undefined : posts[currentPostIndex - 1];
+---
+
+{
+	(previousPost || nextPost) && (
+    <nav class="flex gap-2 sm:justify-normal justify-between">
+      {previousPost && (
+        <a class="border-solid border border-quartz-d40 hover:border-quartz p-2 flex flex-col sm:max-w-40 w-full gap-3 justify-between" href={`/blog/${previousPost.slug}/`}>
+          <span class="text-xs text-quartz-l30 uppercase font-mono">Anterior:&nbsp;</span>
+          <p class="text-sm font-semibold">{previousPost.data.title}</p>
+        </a>
+      )}
+      {nextPost && (
+        <a class="border-solid border border-quartz-d40 hover:border-quartz p-2 flex flex-col sm:max-w-40 w-full gap-3" href={`/blog/${nextPost.slug}/`}>
+          <span class="text-xs text-quartz-l30 uppercase font-mono">Seguinte:&nbsp;</span>
+          <p class="text-sm font-semibold">{nextPost.data.title}</p>
+        </a>
+      )}
+    </nav>
+	)
+}

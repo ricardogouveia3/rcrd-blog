@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import BlogPostNavPrevNext from '../components/BlogPostNavPrevNext.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -34,8 +35,10 @@ const { title, description, pubDate, updatedDate, heroImage , tags } = Astro.pro
 					<slot class="my-10" />					
 				</div>
 			</article>
-			<div class="flex">
+			<hr class="my-6 bg-quartz-l20 border-quartz-d40" />
+			<div class="flex justify-between sm:items-center sm:flex-row flex-col gap-5">
 				<a class="no-underline hover:bg-quartz-d40 p-1.5 inline-block" href="/">← Início</a> 
+				<BlogPostNavPrevNext />
 			</div>
 		</main>
 		<Footer />
