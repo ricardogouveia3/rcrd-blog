@@ -4,9 +4,9 @@ import type { APIRoute } from "astro";
 export const GET: APIRoute = async () => {
   const posts = await getCollection("blog");
   
-  const sortedPosts = posts
+  const sorted = posts
     .toSorted((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
-    .map(post => ({
+    .map((post) => ({
       slug: post.slug,
       title: post.data.title,
       description: post.data.description,
@@ -16,8 +16,7 @@ export const GET: APIRoute = async () => {
       tags: post.data.tags ?? [],
     }));
   
-  return new Response(JSON.stringify(sortedPosts), {
-    status: 200,
+  return new Response(JSON.stringify(sorted), {
     headers: {
       "Content-Type": "application/json",
     },
