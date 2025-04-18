@@ -1,7 +1,8 @@
 ---
 pubDate: "Jun 07 2024"
 title: Comunidade como indicativo de empresas
-description: ""
+description: "O apoio a comunidades de desenvolvedores pode servir como critério de escolha de 
+empresas onde se trabalhar"
 heroImage: https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h3867c48pl32ejur0y8q.jpg
 tags: [community, developer, career, software]
 ---
